@@ -40,7 +40,7 @@ def getProfile(Id):
 
     return profile
 
-def detect_and_save(Id):
+def detectAndSave(Id):
     face_cascade = cv.CascadeClassifier(
         '/usr/local/Cellar/opencv/3.4.2/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml')
     capture = cv.VideoCapture(0)
@@ -81,7 +81,7 @@ def getImagesWithID(path):
 
     return np.array(IDs), faces
 
-def train_faces(Id):
+def trainFaces(Id):
     recognizer = cv.face.LBPHFaceRecognizer_create()
     path = '/Users/cameron.karagitz/Documents/code/python/openCV/dataSet'
     IDs, faces = getImagesWithID(path)
